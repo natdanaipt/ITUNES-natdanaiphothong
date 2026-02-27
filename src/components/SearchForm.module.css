@@ -1,0 +1,120 @@
+.wrapper {
+  padding: 40px 0 0;
+  animation: fadeUp 0.6s ease 0.05s both;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 720px;
+}
+
+/* ── Input row ── */
+.inputWrap {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.inputWrap.focused {
+  border-color: rgba(250, 45, 72, 0.55);
+  box-shadow:
+    0 0 0 4px rgba(250, 45, 72, 0.1),
+    0 16px 48px rgba(250, 45, 72, 0.12);
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--text-mute);
+  margin: 0 4px 0 18px;
+  transition: color 0.2s;
+}
+
+.inputWrap.focused .icon {
+  color: var(--accent);
+}
+
+.input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 18px 10px;
+  caret-color: var(--accent);
+}
+
+.input::placeholder {
+  color: var(--text-mute);
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  color: var(--text-mute);
+  font-size: 15px;
+  padding: 0 8px;
+  transition: color 0.2s;
+}
+
+.clearBtn:hover {
+  color: var(--text-sub);
+}
+
+.searchBtn {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border: none;
+  color: #fff;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  padding: 0 28px;
+  height: 100%;
+  min-height: 56px;
+  transition: opacity 0.2s, filter 0.2s;
+  flex-shrink: 0;
+}
+
+.searchBtn:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.searchBtn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* ── Suggestions ── */
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.suggestion {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 100px;
+  color: var(--text-mute);
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 5px 14px;
+  transition: all 0.2s;
+}
+
+.suggestion:hover {
+  border-color: rgba(250, 45, 72, 0.3);
+  color: var(--accent);
+  background: rgba(250, 45, 72, 0.06);
+}

@@ -1,0 +1,126 @@
+.section {
+  padding: 64px 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+/* ── Hero ── */
+.hero {
+  max-width: 680px;
+  animation: fadeUp 0.7s ease 0.05s both;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-family: var(--font-disp);
+  font-size: clamp(58px, 9vw, 92px);
+  line-height: 0.95;
+  letter-spacing: 1px;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.gradient {
+  background: linear-gradient(95deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lead {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-sub);
+  max-width: 520px;
+}
+
+/* ── Genres ── */
+.genreBlock {
+  animation: fadeUp 0.7s ease 0.15s both;
+}
+
+.genreLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: var(--text-mute);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  padding: 9px 20px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-sub);
+  transition: all 0.2s;
+}
+
+.chip:hover {
+  background: rgba(250, 45, 72, 0.1);
+  border-color: rgba(250, 45, 72, 0.35);
+  color: #ff6677;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(250, 45, 72, 0.15);
+}
+
+/* ── Features ── */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 16px;
+  animation: fadeUp 0.7s ease 0.25s both;
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 26px 24px;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.featureCard:hover {
+  background: rgba(255, 255, 255, 0.045);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+}
+
+.featureIcon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.featureTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.featureDesc {
+  font-size: 13px;
+  color: var(--text-mute);
+  line-height: 1.5;
+}
